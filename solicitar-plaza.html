@@ -147,11 +147,15 @@
 <div class="max-w-6xl mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-12 gap-16">
 <!-- Section 2: Form -->
 <div class="lg:col-span-7 bg-surface-container-low p-8 md:p-12 rounded-xl paper-on-table fade-in" style="animation-delay: 0.2s;">
-<form class="space-y-8" name="solicitar-plaza" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-<input type="hidden" name="form-name" value="solicitar-plaza">
-<p class="hidden">
-    <label>No rellenar si eres humano: <input name="bot-field"></label>
-</p>
+<form class="space-y-8" id="form-solicitar-plaza" action="https://api.web3forms.com/submit" method="POST">
+<input type="hidden" name="access_key" value="fac58142-535f-44bc-8589-0bc5f5012c29">
+<input type="hidden" name="subject" value="Nueva solicitud de plaza - Ibiza Savinya Healing">
+<input type="hidden" name="from_name" value="Web Ibiza Savinya Healing">
+<input type="checkbox" name="botcheck" class="hidden" style="display:none">
+<div id="form-success-message" class="hidden bg-primary-container text-on-primary-container p-6 rounded-lg mb-6">
+    <p class="font-bold">¡Solicitud enviada!</p>
+    <p class="text-sm opacity-90">Gracias por escribirnos. Te contactaremos muy pronto.</p>
+</div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 <div class="space-y-2">
 <label class="font-label-md text-label-md text-on-surface-variant block">Nombre Completo</label>
@@ -303,5 +307,49 @@
                 nav.classList.add('py-4');
             }
         });
+
+        // Web3Forms submission handling
+        const form = document.getElementById('form-solicitar-plaza');
+        const successMessage = document.getElementById('form-success-message');
+        if (form) {
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                const btn = form.querySelector('button[type="submit"]');
+                const originalContent = btn.innerHTML;
+                btn.innerHTML = '<span class="material-symbols-outlined animate-spin">sync</span> Enviando...';
+                btn.disabled = true;
+
+                const formData = new FormData(form);
+                const object = Object.fromEntries(formData);
+                const json = JSON.stringify(object);
+
+                fetch(form.action, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+                    body: json
+                })
+                    .then(async (response) => {
+                        let result = await response.json();
+                        if (response.status === 200) {
+                            successMessage.classList.remove('hidden');
+                            form.reset();
+                            btn.innerHTML = '¡Solicitud enviada!';
+                        } else {
+                            console.error(result);
+                            btn.innerHTML = 'Error, intenta de nuevo';
+                        }
+                    })
+                    .catch((error) => {
+                        console.error(error);
+                        btn.innerHTML = 'Error, intenta de nuevo';
+                    })
+                    .finally(() => {
+                        setTimeout(() => {
+                            btn.innerHTML = originalContent;
+                            btn.disabled = false;
+                        }, 3000);
+                    });
+            });
+        }
     </script>
 </body></html>
