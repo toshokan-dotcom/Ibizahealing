@@ -1,0 +1,440 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="es" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>El Retiro | Ibiza Savinya Healing</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface": "#1d1b16",
+                        "secondary-container": "#fea682",
+                        "surface-tint": "#4b6454",
+                        "on-background": "#1d1b16",
+                        "primary-fixed": "#cde9d5",
+                        "on-surface-variant": "#424843",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-container": "#2f4738",
+                        "inverse-primary": "#b2cdb9",
+                        "outline": "#737973",
+                        "secondary": "#904c2e",
+                        "surface-dim": "#dfd9d0",
+                        "on-error": "#ffffff",
+                        "on-tertiary-container": "#cea962",
+                        "on-primary-fixed": "#082013",
+                        "tertiary": "#3b2800",
+                        "surface-container-high": "#ede7de",
+                        "secondary-fixed-dim": "#ffb598",
+                        "outline-variant": "#c2c8c1",
+                        "surface-container": "#f3ede3",
+                        "on-tertiary-fixed": "#271900",
+                        "primary": "#193123",
+                        "on-secondary": "#ffffff",
+                        "surface-container-low": "#f9f3e9",
+                        "on-primary-container": "#9ab5a1",
+                        "surface-variant": "#e8e2d8",
+                        "surface-bright": "#fff9ee",
+                        "background": "#fff9ee",
+                        "on-primary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed": "#370e00",
+                        "inverse-surface": "#33302a",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-fixed-variant": "#5d4202",
+                        "primary-fixed-dim": "#b2cdb9",
+                        "tertiary-fixed-dim": "#e9c178",
+                        "on-secondary-container": "#78391d",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed-variant": "#344c3d",
+                        "surface-container-highest": "#e8e2d8",
+                        "inverse-on-surface": "#f6f0e6",
+                        "surface": "#fff9ee",
+                        "tertiary-container": "#573d00",
+                        "tertiary-fixed": "#ffdea5",
+                        "secondary-fixed": "#ffdbce",
+                        "on-secondary-fixed-variant": "#733519",
+                        "error-container": "#ffdad6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "section-gap": "120px",
+                        "gutter": "24px",
+                        "margin-desktop": "80px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "display-lg": ["Playfair Display"],
+                        "body-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "display-lg-mobile": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "headline-lg-mobile": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                        "body-lg": ["20px", {"lineHeight": "1.6", "fontWeight": "300"}],
+                        "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "display-lg-mobile": ["40px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                        "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .text-balance { text-wrap: balance; }
+        .tab-active { color: #193123; border-bottom: 2px solid #193123; }
+        .accordion-content { transition: max-height 0.3s ease-out; overflow: hidden; max-height: 0; }
+        .accordion-open .accordion-content { max-height: 500px; }
+        .accordion-open .chevron { transform: rotate(180deg); }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-desktop py-4 max-w-full bg-background/90 backdrop-blur-md border-b border-outline-variant/30">
+<div class="font-headline-md text-headline-md text-primary">Ibiza Savinya Healing</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-md text-label-md" href="index.html">Inicio</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-label-md text-label-md" href="el-retiro.html">El Retiro</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-md text-label-md" href="lugar-y-facilitadores.html">Lugar y Facilitadores</a>
+<a href="solicitar-plaza.html" class="bg-primary text-on-primary px-6 py-2 rounded-lg font-label-md text-label-md hover:opacity-90 transition-all inline-block">Solicitar Plaza</a>
+</div>
+<div class="md:hidden">
+<span class="material-symbols-outlined text-primary text-3xl">menu</span>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative h-[870px] flex items-center justify-center overflow-hidden pt-20">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center scale-105" data-alt="A serene, wide-angle cinematic shot of a sunset over the Mediterranean coast in Ibiza." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBz1nprUpdyl1W3lsJTL7Tl1BNt5GnefMQhNCVmwJ7Gyj_Y21_cwVRSj3qimmVIdY4KFn-qA235i7_vWysDJ6yeYMd5e9hWe8CqnMmIKNPklaYXbk0XTmLbYA317kDBCHGmmpe5QJDNJGoTNMAvBDxpkrQ_ObGdAm8cnU9XWCYHh0yMbYKiBCz9GhyGh3KkwVP7l1INKSHn8ddH2-8QB88bTEpYcY3IL_k6TN0g8JcufqPAC3rdTfL6zi8F5RoKeHV_qyZ2eUHK2sw')"></div>
+<div class="absolute inset-0 bg-black/20"></div>
+</div>
+<div class="relative z-10 text-center px-margin-mobile md:px-margin-desktop max-w-4xl">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-white text-balance drop-shadow-lg">El retiro</h1>
+<p class="mt-6 font-body-lg text-body-lg text-white/90 text-balance max-w-2xl mx-auto drop-shadow-md">
+                Una experiencia íntima de 3 o 5 días para parar, respirar y volver a ti.
+            </p>
+<div class="mt-10 flex justify-center gap-4">
+<a class="bg-white text-primary px-8 py-3 rounded-lg font-label-md text-label-md hover:bg-surface-container transition-all" href="#precios">Ver Planes</a>
+<a class="border border-white text-white px-8 py-3 rounded-lg font-label-md text-label-md hover:bg-white/10 transition-all" href="#experiencia">Descubrir más</a>
+</div>
+</div>
+</header>
+<!-- Introduction -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto" id="experiencia">
+<div class="grid md:grid-cols-2 gap-16 items-center">
+<div class="relative">
+<div class="aspect-[4/5] rounded-lg shadow-2xl bg-cover bg-center" data-alt="A close-up, tactile photo of sun-bleached linen curtains gently blowing in a soft Mediterranean breeze." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDke2-3rZpFWLb9T9B12s8SnCM94wgUu67mhQ5lIHglIVxJuI5yYPF0sG470aG_bGb-JJxkuW9ysbSXhMNmxCb_4X0vWre2Lyv9kljWr_9K7KeepamTGTFen-0Ehhblqr55lfEcj0bfXEoE26_9Esp3vlwnYo3uYQP6xXwNlK_LPR6UqVePDp-5bRpIxjz0YXpYmYdtJBv3KIyWlRu8STu36BVeIK47bDuVW-WJ8knAjY8K5ZmYRf3tJLIdbQZVaU3NG1-V3bSwYCo')"></div>
+<div class="absolute -bottom-8 -right-8 w-48 h-48 border-8 border-surface-container-high rounded-lg z-[-1] hidden md:block"></div>
+</div>
+<div class="space-y-8">
+<span class="text-secondary font-label-md text-label-md tracking-widest uppercase">La Esencia</span>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary">Un espacio para el silencio consciente</h2>
+<div class="space-y-6 text-on-surface-variant font-body-md text-body-md">
+<p class="">En el corazón de Ibiza, lejos del bullicio, hemos creado un refugio donde el tiempo se dilata. Nuestra propuesta no es un retiro convencional, sino un acompañamiento profundo diseñado para regular tu sistema nervioso y reconectar con tu esencia más pura.</p>
+<p class="">Caminaremos por senderos de tierra roja, meditaremos frente al mar y nutriremos nuestro cuerpo con alimentos orgánicos de la isla, cultivados con respeto y servidos con amor. Aquí, el lujo no es la opulencia, sino el espacio, el silencio y la atención plena en cada detalle.</p>
+</div>
+<div class="flex gap-8 pt-4">
+<div class="text-center">
+<span class="block font-headline-md text-primary">10</span>
+<span class="text-label-md text-outline">Personas Máx.</span>
+</div>
+<div class="text-center">
+<span class="block font-headline-md text-primary">100%</span>
+<span class="text-label-md text-outline">Orgánico</span>
+</div>
+<div class="text-center">
+<span class="block font-headline-md text-primary">∞</span>
+<span class="text-label-md text-outline">Paz</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Program Tabs -->
+<section class="bg-surface-container py-section-gap">
+<div class="px-margin-mobile md:px-margin-desktop max-w-5xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary">Tu Viaje de Transformación</h2>
+<p class="mt-4 text-on-surface-variant">Elige el ritmo que tu alma necesita en este momento.</p>
+</div>
+<!-- Tab Navigation -->
+<div class="flex justify-center border-b border-outline-variant mb-12">
+<button class="px-8 py-4 font-label-md text-label-md transition-all tab-active" id="tab-3" onclick="switchTab('3days')">3 Días: Pausa</button>
+<button class="px-8 py-4 font-label-md text-label-md text-on-surface-variant transition-all" id="tab-5" onclick="switchTab('5days')">5 Días: Inmersión</button>
+</div>
+<!-- Tab Content -->
+<div class="space-y-8" id="content-3days">
+<div class="grid gap-6">
+<!-- Day 1 -->
+<div class="bg-background p-8 rounded-lg border border-outline-variant/30 flex flex-col md:flex-row gap-8 items-start">
+<div class="bg-primary text-on-primary w-16 h-16 rounded-full flex items-center justify-center shrink-0 font-headline-md">1</div>
+<div>
+<h3 class="font-headline-md text-primary mb-2">Día 1: Llegada y Arraigo</h3>
+<p class="text-on-surface-variant mb-4">Recepción consciente, círculo de apertura y meditación de toma de tierra bajo los pinos. Cena orgánica comunitaria.</p>
+<span class="text-secondary-fixed-variant font-label-md text-label-md flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">schedule</span> 16:00 - 21:00
+                            </span>
+</div>
+</div>
+<!-- Day 2 -->
+<div class="bg-background p-8 rounded-lg border border-outline-variant/30 flex flex-col md:flex-row gap-8 items-start">
+<div class="bg-primary text-on-primary w-16 h-16 rounded-full flex items-center justify-center shrink-0 font-headline-md">2</div>
+<div>
+<h3 class="font-headline-md text-primary mb-2">Día 2: Conexión Fluida</h3>
+<p class="text-on-surface-variant mb-4">Qigong al amanecer, caminata silenciosa por la costa y sesión grupal de reconexión interior. Tiempo para el descanso personal.</p>
+<span class="text-secondary-fixed-variant font-label-md text-label-md flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">schedule</span> 08:00 - 20:00
+                            </span>
+</div>
+</div>
+<!-- Day 3 -->
+<div class="bg-background p-8 rounded-lg border border-outline-variant/30 flex flex-col md:flex-row gap-8 items-start">
+<div class="bg-primary text-on-primary w-16 h-16 rounded-full flex items-center justify-center shrink-0 font-headline-md">3</div>
+<div>
+<h3 class="font-headline-md text-primary mb-2">Día 3: Integración y Cierre</h3>
+<p class="text-on-surface-variant mb-4">Práctica de gratitud, ritual de integración y despedida consciente. Regreso a casa con una nueva mirada.</p>
+<span class="text-secondary-fixed-variant font-label-md text-label-md flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">schedule</span> 08:00 - 14:00
+                            </span>
+</div>
+</div>
+</div>
+</div>
+<div class="hidden space-y-8 text-center py-12" id="content-5days">
+<p class="font-headline-md text-on-surface-variant italic">La inmersión de 5 días incluye profundización en el día 3 y 4 con talleres de nutrición consciente y sesiones individuales extendidas.</p>
+<a href="https://wa.me/WHATSAPP_NUMBER_PLACEHOLDER" target="_blank" rel="noopener" class="bg-primary-container p-6 rounded-lg text-on-primary-container inline-block">
+                    Consultar el programa detallado vía WhatsApp
+                </a>
+</div>
+</div>
+</section>
+<!-- Activities -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop">
+<div class="max-w-7xl mx-auto">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary text-center mb-16">Herramientas de Bienestar</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Activity 1 -->
+<div class="group cursor-default">
+<div class="overflow-hidden rounded-lg mb-4 h-64 relative">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="A tranquil scene of a person meditating in a minimalist wooden pavilion overlooking the calm sea at dawn." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuACdgHLGpHpgqLTjHvm3w2lGGmudgJpDxS8__JwuxGT7MsuPy239GW4AFvhQTyMdlb6vyQ35eAyyB5zUmT5A1fINpTe_07oXJODSnjv5q7SnX_uhkHmok5nNWmgNxVXDjklj6rG1azEyk4_eLi6xQ_SvVxSbncRXld0pqHfkL3vHdbFlpbTLizeMQsFubRkFz6M8_HRLOgPc5b9KbmFetEoF0vRBmtsylZ9QEGtj-wKpbncyMJicI7Qq6nfDv1PMOyfLgsjGRPR558')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"></div>
+</div>
+<h3 class="font-headline-md text-primary mb-2">Meditación y Qigong</h3>
+<p class="text-on-surface-variant">Prácticas milenarias para cultivar la energía vital y calmar la mente en un entorno de paz absoluta.</p>
+</div>
+<!-- Activity 2 -->
+<div class="group cursor-default">
+<div class="overflow-hidden rounded-lg mb-4 h-64 relative">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="A beautiful, rustic table setting with a spread of vibrant, organic Mediterranean food." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA6lJg7o0PWeobPsTDVFlOOdFDbkBixnDKprqZ-IFF13htnQ3WkHXdvX33weJHVgDRW1pzzba5S__R8Txn-BwQ4JSmqP3MY4LakLyKT0ivuqb1MRYT6TJaUsIhZnWTbakO7NbF37D0eHAqsIxzS1s-JD1JpAGnL1xc0yLSW2NKte5E75nDqdP1CVvpLaIwI93pobRAX-R8zUyvXJ2ZG3Ud0_f7nRpM18unqiLHpdj7AOoXer1lA6ybUsco6IEFejMRDMWW8LWjHxo4')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"></div>
+</div>
+<h3 class="font-headline-md text-primary mb-2">Alimentación Consciente</h3>
+<p class="text-on-surface-variant">Menús vegetarianos y orgánicos diseñados para desintoxicar y nutrir cada célula de tu cuerpo.</p>
+</div>
+<!-- Activity 3 -->
+<div class="group cursor-default">
+<div class="overflow-hidden rounded-lg mb-4 h-64 relative">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="A detail shot of smooth, warm stones and a bottle of essential oil on a bed of fresh lavender sprigs." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBVV2R-FbmW-m8-BA_-LAQaqQhlXlvBrW7BJYAEv5NBpGyuKct0RpH5gO1ZcDQ9KuIWDwQPaQyOCwjzJVpAQFz08LOHMM1ogUGWizrkmnvQpeZenXmsAk3H3liDuWqsipf6xf2iz1dAJgDgwA8rI_WazhrIArPHoS47-osCbVPyKjaNxX5oECZW235QXsa7mHGlLExPBqLuOJxRFN9OOGZIorvFKSvvO3mmmfu9w9VALc7Mif1VGgVGw08WibnGD4MgPSxIbTN7loc')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"></div>
+</div>
+<h3 class="font-headline-md text-primary mb-2">Reconexión Interior</h3>
+<p class="text-on-surface-variant">Sesiones grupales guiadas para liberar bloqueos emocionales y recuperar la claridad mental.</p>
+</div>
+</div>
+<!-- Optional Block -->
+<div class="mt-20 bg-surface-container-low p-10 md:p-16 rounded-xl border border-secondary/20 flex flex-col md:flex-row items-center gap-12">
+<div class="flex-1">
+<span class="text-secondary font-label-md text-label-md tracking-widest uppercase">Opcional</span>
+<h3 class="font-headline-lg text-primary mt-2">Rituales Corporales</h3>
+<p class="mt-4 text-on-surface-variant text-body-lg">Completa tu experiencia con masajes terapéuticos y rituales de belleza natural. Trabajamos con aceites esenciales destilados en la isla para una regeneración profunda de la piel y el espíritu.</p>
+<ul class="mt-6 space-y-2 text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-sm">check</span> Masaje Sueco Relajante</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-sm">check</span> Drenaje Linfático Facial</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-sm">check</span> Terapia de Sonido con Cuencos</li>
+</ul>
+</div>
+<div class="w-full md:w-1/3">
+<div class="aspect-square rounded-full border-[12px] border-white shadow-xl bg-cover bg-center" data-alt="A macro photograph of water droplets on a green olive leaf, backlit by a soft golden morning sun." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDXY6GEzLi8tfuIAtR1CenJymL_xkxsBprFF7BIgDE-hSV_SUWwo_z6DQUaUSE6IV6P9lvithdNWwMJuCqqrFQhPZSqGjq1VPGSWaVQ4OLIRp_KWxqShb8fB_I4BgppzBS1AqwsTI59ijlpXQ8YHZZfY4FHikrMk5F_jKNI50Eelj0Ih6ZBo-gX4CLzqnEQXuPLrpWXoiGum6LHP-NqchlrF1hhnGFhjEVlr35yHLxkee0OYFBk3BUnnV7YE3zkugTX936o8pg2Yow')"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing -->
+<section class="bg-primary py-section-gap" id="precios">
+<div class="px-margin-mobile md:px-margin-desktop max-w-6xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-white">Inversión en ti mismo</h2>
+<p class="mt-4 text-primary-fixed-dim">Todo incluido. Solo necesitas traer tu presencia.</p>
+</div>
+<div class="grid md:grid-cols-2 gap-8 items-stretch">
+<!-- 3 Days -->
+<div class="bg-white p-12 rounded-lg flex flex-col items-center text-center shadow-2xl relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4">
+<span class="bg-secondary-container text-on-secondary-container text-xs font-bold px-3 py-1 rounded-full">3 DÍAS</span>
+</div>
+<h3 class="font-headline-md text-primary">Retiro Pausa</h3>
+<div class="my-8">
+<span class="text-display-lg text-primary">1.350€</span>
+<span class="block text-outline font-label-md">Precio por persona</span>
+</div>
+<ul class="text-left space-y-4 mb-10 w-full text-on-surface-variant">
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary mt-1">done</span> Alojamiento en suite privada</li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary mt-1">done</span> Pensión completa orgánica</li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary mt-1">done</span> Todas las actividades grupales</li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary mt-1">done</span> Material de meditación y yoga</li>
+</ul>
+<a href="solicitar-plaza.html" class="mt-auto w-full bg-primary text-white py-4 rounded-lg font-bold hover:bg-primary-container transition-colors inline-block">Solicitar Plaza</a>
+</div>
+<!-- 5 Days -->
+<div class="bg-white p-12 rounded-lg flex flex-col items-center text-center shadow-2xl border-2 border-secondary relative">
+<div class="absolute -top-4 bg-secondary text-white px-6 py-1 rounded-full font-label-md">MÁS POPULAR</div>
+<div class="absolute top-0 right-0 p-4">
+<span class="bg-secondary-container text-on-secondary-container text-xs font-bold px-3 py-1 rounded-full">5 DÍAS</span>
+</div>
+<h3 class="font-headline-md text-primary">Retiro Inmersión</h3>
+<div class="my-8">
+<span class="text-display-lg text-primary">2.150€</span>
+<span class="block text-outline font-label-md">Precio por persona</span>
+</div>
+<ul class="text-left space-y-4 mb-10 w-full text-on-surface-variant">
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary mt-1">done</span> Todo lo incluido en el Retiro Pausa</li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary mt-1">done</span> 1 Sesión individual de sanación (90 min)</li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary mt-1">done</span> Taller de cocina vitalista</li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary mt-1">done</span> Ritual de baño de bosque extendido</li>
+</ul>
+<a href="solicitar-plaza.html" class="mt-auto w-full bg-secondary text-white py-4 rounded-lg font-bold hover:opacity-90 transition-all inline-block">Solicitar Plaza</a>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQs -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-3xl mx-auto">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary text-center mb-12">Preguntas Frecuentes</h2>
+<div class="space-y-4">
+<!-- FAQ 1 -->
+<div class="border border-outline-variant/50 rounded-lg overflow-hidden accordion-item">
+<button class="w-full flex justify-between items-center p-6 text-left hover:bg-surface-container-low transition-colors" onclick="toggleAccordion(this)">
+<span class="font-bold text-primary">¿Puedo venir solo/a?</span>
+<span class="material-symbols-outlined chevron transition-transform">expand_more</span>
+</button>
+<div class="accordion-content">
+<p class="p-6 pt-0 text-on-surface-variant">Por supuesto. La mayoría de nuestros participantes vienen solos. Es una oportunidad perfecta para reconectar contigo mismo/a en un entorno seguro y acogedor.</p>
+</div>
+</div>
+<!-- FAQ 2 -->
+<div class="border border-outline-variant/50 rounded-lg overflow-hidden accordion-item">
+<button class="w-full flex justify-between items-center p-6 text-left hover:bg-surface-container-low transition-colors" onclick="toggleAccordion(this)">
+<span class="font-bold text-primary">¿Necesito experiencia previa en meditación?</span>
+<span class="material-symbols-outlined chevron transition-transform">expand_more</span>
+</button>
+<div class="accordion-content">
+<p class="p-6 pt-0 text-on-surface-variant">No es necesaria ninguna experiencia. Nuestras prácticas están diseñadas para todos los niveles, desde principiantes hasta practicantes avanzados.</p>
+</div>
+</div>
+<!-- FAQ 3 -->
+<div class="border border-outline-variant/50 rounded-lg overflow-hidden accordion-item">
+<button class="w-full flex justify-between items-center p-6 text-left hover:bg-surface-container-low transition-colors" onclick="toggleAccordion(this)">
+<span class="font-bold text-primary">¿Cuál es la política de cancelación?</span>
+<span class="material-symbols-outlined chevron transition-transform">expand_more</span>
+</button>
+<div class="accordion-content">
+<p class="p-6 pt-0 text-on-surface-variant">Ofrecemos un reembolso total si cancelas con 30 días de antelación. Para cancelaciones posteriores, consulta nuestros términos y condiciones detallados en el formulario de solicitud.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="mb-section-gap px-margin-mobile md:px-margin-desktop">
+<div class="bg-surface-container-highest rounded-3xl p-12 md:p-24 text-center max-w-7xl mx-auto overflow-hidden relative">
+<!-- Decorative Background Element -->
+<div class="absolute -top-24 -left-24 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+<div class="absolute -bottom-24 -right-24 w-96 h-96 bg-secondary/5 rounded-full blur-3xl"></div>
+<div class="relative z-10 max-w-2xl mx-auto">
+<h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary">¿Sientes el llamado?</h2>
+<p class="mt-6 text-body-lg text-on-surface-variant italic">Las plazas son muy limitadas para preservar la intimidad del grupo.</p>
+<div class="mt-12 flex flex-col md:flex-row gap-4 justify-center">
+<a href="solicitar-plaza.html" class="bg-primary text-on-primary px-10 py-5 rounded-lg font-label-md text-label-md hover:scale-105 transition-all shadow-lg inline-block">Solicitar Plaza</a>
+<a href="https://wa.me/WHATSAPP_NUMBER_PLACEHOLDER" target="_blank" rel="noopener" class="border border-primary text-primary px-10 py-5 rounded-lg font-label-md text-label-md hover:bg-primary/5 transition-all inline-block">Hablar por WhatsApp</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full py-section-gap px-margin-desktop flex flex-col items-center gap-unit bg-surface-container">
+<div class="font-headline-md text-headline-md text-primary mb-8">Ibiza Savinya Healing</div>
+<div class="flex flex-wrap justify-center gap-x-8 gap-y-4 mb-12">
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200 font-label-md text-label-md" href="index.html">Inicio</a>
+<a class="text-primary font-bold font-label-md text-label-md" href="el-retiro.html">El Retiro</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200 font-label-md text-label-md" href="lugar-y-facilitadores.html">Lugar y Facilitadores</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200 font-label-md text-label-md" href="solicitar-plaza.html">Solicitar Plaza</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200 font-label-md text-label-md" href="privacidad.html">Política de Privacidad</a>
+</div>
+<p class="text-on-surface-variant/60 font-body-md text-body-md text-center">© 2024 Ibiza Savinya Healing. Todos los derechos reservados.</p>
+</footer>
+<!-- SideNavBar (WhatsApp Floating CTA) -->
+<div class="fixed bottom-8 right-8 z-50 flex items-center justify-center">
+<a href="https://wa.me/WHATSAPP_NUMBER_PLACEHOLDER" target="_blank" rel="noopener" aria-label="WhatsApp Contact" class="bg-primary text-on-primary rounded-full h-16 w-16 shadow-lg shadow-primary/20 hover:scale-110 hover:shadow-2xl transition-all duration-300 flex items-center justify-center group active:scale-90">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">chat</span>
+<span class="absolute right-20 bg-primary text-white px-4 py-2 rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                WhatsApp Contact - Enviar Mensaje
+            </span>
+</a>
+</div>
+<script>
+        function switchTab(tab) {
+            const content3 = document.getElementById('content-3days');
+            const content5 = document.getElementById('content-5days');
+            const btn3 = document.getElementById('tab-3');
+            const btn5 = document.getElementById('tab-5');
+
+            if (tab === '3days') {
+                content3.classList.remove('hidden');
+                content5.classList.add('hidden');
+                btn3.classList.add('tab-active');
+                btn3.classList.remove('text-on-surface-variant');
+                btn5.classList.remove('tab-active');
+                btn5.classList.add('text-on-surface-variant');
+            } else {
+                content3.classList.add('hidden');
+                content5.classList.remove('hidden');
+                btn5.classList.add('tab-active');
+                btn5.classList.remove('text-on-surface-variant');
+                btn3.classList.remove('tab-active');
+                btn3.classList.add('text-on-surface-variant');
+            }
+        }
+
+        function toggleAccordion(button) {
+            const item = button.closest('.accordion-item');
+            const isOpen = item.classList.contains('accordion-open');
+            
+            // Close all others
+            document.querySelectorAll('.accordion-item').forEach(el => el.classList.remove('accordion-open'));
+            
+            // Toggle current
+            if (!isOpen) {
+                item.classList.add('accordion-open');
+            }
+        }
+    </script>
+</body></html>
