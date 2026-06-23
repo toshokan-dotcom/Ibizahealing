@@ -1,0 +1,307 @@
+<!DOCTYPE html><html class="light" lang="es" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Solicitar Plaza | Ibiza Savinya Healing</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&amp;family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-surface": "#1d1b16",
+                    "secondary-container": "#fea682",
+                    "surface-tint": "#4b6454",
+                    "on-background": "#1d1b16",
+                    "primary-fixed": "#cde9d5",
+                    "on-surface-variant": "#424843",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-container": "#2f4738",
+                    "inverse-primary": "#b2cdb9",
+                    "outline": "#737973",
+                    "secondary": "#904c2e",
+                    "surface-dim": "#dfd9d0",
+                    "on-error": "#ffffff",
+                    "on-tertiary-container": "#cea962",
+                    "on-primary-fixed": "#082013",
+                    "tertiary": "#3b2800",
+                    "surface-container-high": "#ede7de",
+                    "secondary-fixed-dim": "#ffb598",
+                    "outline-variant": "#c2c8c1",
+                    "surface-container": "#f3ede3",
+                    "on-tertiary-fixed": "#271900",
+                    "primary": "#193123",
+                    "on-secondary": "#ffffff",
+                    "surface-container-low": "#f9f3e9",
+                    "on-primary-container": "#9ab5a1",
+                    "surface-variant": "#e8e2d8",
+                    "surface-bright": "#fff9ee",
+                    "background": "#fff9ee",
+                    "on-primary": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-fixed": "#370e00",
+                    "inverse-surface": "#33302a",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-fixed-variant": "#5d4202",
+                    "primary-fixed-dim": "#b2cdb9",
+                    "tertiary-fixed-dim": "#e9c178",
+                    "on-secondary-container": "#78391d",
+                    "error": "#ba1a1a",
+                    "on-primary-fixed-variant": "#344c3d",
+                    "surface-container-highest": "#e8e2d8",
+                    "inverse-on-surface": "#f6f0e6",
+                    "surface": "#fff9ee",
+                    "tertiary-container": "#573d00",
+                    "tertiary-fixed": "#ffdea5",
+                    "secondary-fixed": "#ffdbce",
+                    "on-secondary-fixed-variant": "#733519",
+                    "error-container": "#ffdad6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "20px",
+                    "section-gap": "120px",
+                    "gutter": "24px",
+                    "margin-desktop": "80px",
+                    "unit": "8px"
+            },
+            "fontFamily": {
+                    "body-md": ["Inter"],
+                    "display-lg": ["Playfair Display"],
+                    "body-lg": ["Inter"],
+                    "label-md": ["Inter"],
+                    "display-lg-mobile": ["Playfair Display"],
+                    "headline-lg": ["Playfair Display"],
+                    "headline-md": ["Playfair Display"],
+                    "headline-lg-mobile": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                    "body-lg": ["20px", {"lineHeight": "1.6", "fontWeight": "300"}],
+                    "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #fff9ee; /* background token */
+            color: #1d1b16; /* on-surface token */
+            scroll-behavior: smooth;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .paper-on-table {
+            box-shadow: 0 30px 60px -12px rgba(216, 199, 170, 0.3);
+            border: 1px solid #D8C7AA;
+        }
+        .fade-in {
+            animation: fadeIn 1.2s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md overflow-x-hidden">
+<!-- TopNavBar (Shared Component) -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-5 md:px-margin-desktop py-4 max-w-full bg-background/90 backdrop-blur-md border-b border-outline-variant/30 transition-all duration-300">
+<div class="font-headline-md text-headline-md text-primary tracking-tight">Ibiza Savinya Healing</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="index.html">Inicio</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="el-retiro.html">El Retiro</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="lugar-y-facilitadores.html">Lugar y Facilitadores</a>
+<a class="font-label-md text-label-md text-primary font-bold border-b-2 border-primary pb-1" href="solicitar-plaza.html">Solicitar Plaza</a>
+</div>
+<a href="solicitar-plaza.html" class="bg-primary text-on-primary px-6 py-2 rounded-lg font-label-md hover:opacity-90 transition-all active:scale-95 inline-block">
+            Solicitar Plaza
+        </a>
+</nav>
+<main class="pt-32 pb-section-gap">
+<!-- Section 1: Hero -->
+<section class="max-w-4xl mx-auto px-margin-mobile md:px-0 text-center mb-16 fade-in">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6">Solicita tu plaza</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto italic">
+                Cuéntanos un poco sobre ti para orientarte... No estás comprando todavía.
+            </p>
+<div class="w-24 h-px bg-tertiary-fixed-dim mx-auto mt-12"></div>
+</section>
+<div class="max-w-6xl mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-12 gap-16">
+<!-- Section 2: Form -->
+<div class="lg:col-span-7 bg-surface-container-low p-8 md:p-12 rounded-xl paper-on-table fade-in" style="animation-delay: 0.2s;">
+<form class="space-y-8" name="solicitar-plaza" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+<input type="hidden" name="form-name" value="solicitar-plaza">
+<p class="hidden">
+    <label>No rellenar si eres humano: <input name="bot-field"></label>
+</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface-variant block">Nombre Completo</label>
+<input class="w-full bg-transparent border-b border-outline-variant focus:border-tertiary outline-none py-2 transition-colors duration-300" placeholder="Tu nombre..." type="text" name="nombre" required>
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface-variant block">Email</label>
+<input class="w-full bg-transparent border-b border-outline-variant focus:border-tertiary outline-none py-2 transition-colors duration-300" placeholder="tu@email.com" type="email" name="email" required>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface-variant block">WhatsApp / Teléfono</label>
+<input class="w-full bg-transparent border-b border-outline-variant focus:border-tertiary outline-none py-2 transition-colors duration-300" placeholder="+34 ..." type="tel" name="telefono">
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface-variant block">País de Residencia</label>
+<input class="w-full bg-transparent border-b border-outline-variant focus:border-tertiary outline-none py-2 transition-colors duration-300" placeholder="España, México..." type="text" name="pais">
+</div>
+</div>
+<div class="space-y-4">
+<label class="font-label-md text-label-md text-on-surface-variant block">Retiro de Interés</label>
+<div class="flex flex-wrap gap-4">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 text-primary focus:ring-primary border-outline-variant" name="duracion" type="radio" value="3 dias">
+<span class="font-body-md text-on-surface group-hover:text-primary transition-colors">Retiro 3 días</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 text-primary focus:ring-primary border-outline-variant" name="duracion" type="radio" value="5 dias">
+<span class="font-body-md text-on-surface group-hover:text-primary transition-colors">Retiro 5 días</span>
+</label>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface-variant block">¿Por qué buscas este retiro ahora?</label>
+<textarea class="w-full bg-transparent border border-outline-variant rounded-lg p-4 focus:border-tertiary outline-none transition-colors duration-300 resize-none" placeholder="Comparte con nosotros tu intención..." rows="4" name="mensaje"></textarea>
+</div>
+<div class="flex items-center gap-4 py-4">
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox" name="quiere_llamada" value="si">
+<div class="w-11 h-6 bg-outline-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+<span class="font-label-md text-label-md text-on-surface">¿Deseas agendar una breve llamada informativa?</span>
+</div>
+<button class="w-full bg-primary text-white py-5 rounded-lg font-bold text-lg hover:bg-primary/90 transition-all shadow-lg shadow-primary/20 flex items-center justify-center gap-3" type="submit">
+                        Enviar solicitud
+                        <span class="material-symbols-outlined">send</span>
+</button>
+</form>
+</div>
+<!-- Sidebar Section 3 & 4 -->
+<div class="lg:col-span-5 space-y-12">
+<!-- Section 3: Direct Contact -->
+<div class="bg-primary-container text-on-primary-container p-8 rounded-xl shadow-xl fade-in" style="animation-delay: 0.4s;">
+<div class="flex items-center gap-4 mb-4">
+<span class="material-symbols-outlined text-4xl">chat</span>
+<h3 class="font-headline-md text-headline-md text-white">Contacto Directo</h3>
+</div>
+<p class="font-body-md mb-6 opacity-80 text-on-primary-container">
+                        ¿Prefieres hablar directamente con un facilitador antes de completar el formulario?
+                    </p>
+<a class="inline-flex items-center gap-2 bg-secondary-container text-on-secondary-container px-6 py-3 rounded-full font-bold hover:scale-105 transition-transform" href="https://wa.me/WHATSAPP_NUMBER_PLACEHOLDER" target="_blank" rel="noopener">
+                        Hablar por WhatsApp
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<!-- Section 4: Process -->
+<div class="space-y-8 fade-in" style="animation-delay: 0.6s;">
+<h3 class="font-headline-md text-headline-md text-primary">Qué pasa después</h3>
+<div class="space-y-8 relative">
+<!-- Step 1 -->
+<div class="flex gap-6 relative z-10">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center font-bold">1</div>
+<div>
+<h4 class="font-bold text-on-surface">Recibimos tu solicitud</h4>
+<p class="text-on-surface-variant text-sm">Leemos tu mensaje con atención para entender tus necesidades personales.</p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="flex gap-6 relative z-10">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center font-bold">2</div>
+<div>
+<h4 class="font-bold text-on-surface">Revisamos el encaje</h4>
+<p class="text-on-surface-variant text-sm">Confirmamos que el retiro sea la herramienta adecuada para tu momento vital.</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="flex gap-6 relative z-10">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center font-bold">3</div>
+<div>
+<h4 class="font-bold text-on-surface">Resolvemos tus dudas</h4>
+<p class="text-on-surface-variant text-sm">Te contactamos por WhatsApp o llamada para cualquier aclaración pendiente.</p>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="flex gap-6 relative z-10">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center font-bold">4</div>
+<div>
+<h4 class="font-bold text-on-surface">Información de reserva</h4>
+<p class="text-on-surface-variant text-sm">Una vez alineados, recibirás el enlace privado para formalizar tu plaza.</p>
+</div>
+</div>
+<!-- Vertical Line -->
+<div class="absolute left-[19px] top-4 bottom-4 w-px bg-outline-variant/30"></div>
+</div>
+</div>
+<!-- Atmospheric Image -->
+<div class="rounded-xl overflow-hidden h-64 shadow-lg paper-on-table">
+<img class="w-full h-full object-cover" alt="Exterior del hotel rural en Ibiza al atardecer" src="images/exterior.webp">
+</div>
+</div>
+</div>
+</main>
+<!-- SideNavBar (Shared Component / FAB) -->
+<div class="fixed bottom-8 right-8 z-50 flex items-center justify-center">
+<a class="bg-primary text-on-primary rounded-full h-16 w-16 flex items-center justify-center shadow-lg shadow-primary/20 hover:scale-110 hover:shadow-2xl transition-all duration-300 group" href="https://wa.me/WHATSAPP_NUMBER_PLACEHOLDER" target="_blank" rel="noopener">
+<span class="material-symbols-outlined text-3xl">chat</span>
+<div class="absolute right-20 bg-primary text-on-primary px-4 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+<span class="font-label-md">Habla con nosotros</span>
+</div>
+</a>
+</div>
+<!-- Footer (Shared Component) -->
+<footer class="w-full py-section-gap px-5 md:px-margin-desktop flex flex-col items-center gap-8 bg-surface-container-low border-t border-outline-variant/20">
+<div class="font-headline-md text-headline-md text-primary">Ibiza Savinya Healing</div>
+<div class="flex flex-wrap justify-center gap-x-8 gap-y-4">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="index.html">Inicio</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="el-retiro.html">El Retiro</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="lugar-y-facilitadores.html">Lugar y Facilitadores</a>
+<a class="font-label-md text-label-md text-primary font-bold" href="solicitar-plaza.html">Solicitar Plaza</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="privacidad.html">Política de Privacidad</a>
+</div>
+<div class="text-on-surface-variant/60 font-body-md text-center max-w-lg italic">
+            "Un espacio para reconectar con tu esencia en el corazón de la isla blanca."
+        </div>
+<div class="mt-8 pt-8 border-t border-outline-variant/30 w-full text-center">
+<p class="font-label-md text-on-surface-variant/50">© 2024 Ibiza Savinya Healing. Todos los derechos reservados.</p>
+</div>
+</footer>
+<script>
+        // Simple micro-interaction for the navigation background on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-2', 'shadow-sm');
+                nav.classList.remove('py-4');
+            } else {
+                nav.classList.remove('py-2', 'shadow-sm');
+                nav.classList.add('py-4');
+            }
+        });
+    </script>
+</body></html>
