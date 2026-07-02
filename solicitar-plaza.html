@@ -305,49 +305,7 @@
             }
         });
 
-        // Web3Forms submission handling
-        const form = document.getElementById('form-solicitar-plaza');
-        const successMessage = document.getElementById('form-success-message');
-        if (form) {
-            form.addEventListener('submit', function (e) {
-                e.preventDefault();
-                const btn = form.querySelector('button[type="submit"]');
-                const originalContent = btn.innerHTML;
-                btn.innerHTML = '<span class="material-symbols-outlined animate-spin">sync</span> Enviando...';
-                btn.disabled = true;
-
-                const formData = new FormData(form);
-                const object = Object.fromEntries(formData);
-                const json = JSON.stringify(object);
-
-                fetch(form.action, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-                    body: json
-                })
-                    .then(async (response) => {
-                        let result = await response.json();
-                        if (response.status === 200) {
-                            successMessage.classList.remove('hidden');
-                            form.reset();
-                            btn.innerHTML = '¡Solicitud enviada!';
-                        } else {
-                            console.error(result);
-                            btn.innerHTML = 'Error, intenta de nuevo';
-                        }
-                    })
-                    .catch((error) => {
-                        console.error(error);
-                        btn.innerHTML = 'Error, intenta de nuevo';
-                    })
-                    .finally(() => {
-                        setTimeout(() => {
-                            btn.innerHTML = originalContent;
-                            btn.disabled = false;
-                        }, 3000);
-                    });
-            });
-        }
+      
     </script>
       <script>
 document.addEventListener("DOMContentLoaded", function () {
